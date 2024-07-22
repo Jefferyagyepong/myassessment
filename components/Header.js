@@ -4,10 +4,7 @@ export default function Header() {
         <div>
             <header>
                 <h1>IFMA</h1>
-                <form>
-                    <input type="search" name="search" />
-                 
-                </form>
+        
             </header>
         </div>
         
