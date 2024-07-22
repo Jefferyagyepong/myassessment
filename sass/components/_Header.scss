@@ -5,29 +5,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 1rem;
   padding-bottom: 1rem;
 
 }
 
-.links {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem;
-}
-
-.link-item {
-  padding: 1rem;
-  color: black;
-}
-
-.header-title {
-  padding: 1rem;
-  font-weight: 500;
-  font-size: larger;
-  color: blue;
-}
