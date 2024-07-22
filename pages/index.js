@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 export default function Home() {
   const [movies, setMovies] = useState ([]);
-   const base_url = "https://image.tmdb.org/t/p/w500"
+   const base_url = "https://image.tmdb.org/t/p/w500";
   const getMovies = async () =>{
     try{
       await fetch ("https://api.themoviedb.org/3/discover/movie?api_key=906477201fdc7bb5edf0d0b6245069c5")
