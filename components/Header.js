@@ -9,7 +9,7 @@ export default function Header() {
 <input type="search" id="site-search" name="q" />
 
 <button>Search</button>
-                    <form/>
+                    </form>
         
             </header>
         </div>
