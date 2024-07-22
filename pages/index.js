@@ -1,8 +1,21 @@
 import Head from "next/head";
 import Header from "@/components/Header";
+import React, {  useEffect } from 'react'
 
 export default function Home() {
-  
+  cons [movies, setMovies] = useState ([])
+  const getMovies = async () =>{
+    try{
+      await fetch ("https://api.themoviedb.org/3/discover/movie?api_key=906477201fdc7bb5edf0d0b6245069c5")
+      .then(res => res.json())
+      .then(json => setMovies(json.results))
+    }catch(err){
+      console.error(err)
+    }
+  }
+  useEffect(()=>{
+    getMovies()
+  }, [])
   return (
     <>
       <Head>
@@ -16,32 +29,18 @@ export default function Home() {
           content="movie app"
         />
      
-        <link rel="icon" href="/lee.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta
-          name="google-site-verification"
-          content="HIhs3rvT7a6WD274_Txl6lfu3opycY_McRAFvT2-oBw"
-        />
+      
       </Head>
       <main>
         <Header/>
+        <div>
+          {movies.map((data)=>{
+            return <>
+            <Image style={{width:"300px", height:"250px",margin-left:"10px", margin-top:"10px"}} src={"https://image.tmdb.org/t/p/w500${data.poster}"}/>
+            </>
+            
+          })}
+          </div>
 
       
       </main>
