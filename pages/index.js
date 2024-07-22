@@ -36,7 +36,7 @@ export default function Home() {
         <div>
           {movies.map((data)=>{
             return <>
-            <Image style={{width:"300px", height:"250px",margin-left:"10px", margin-top:"10px"}} src={"https://image.tmdb.org/t/p/w500${data.poster}"}/>
+            <Image style={{width:"300px", height:"250px",margin-left:"10px", margin-top:"10px"}} src={"https://image.tmdb.org/t/p/w500${data.poster_path}"}/>
             </>
             
           })}
