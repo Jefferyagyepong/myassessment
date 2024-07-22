@@ -37,9 +37,9 @@ export default function Home() {
       <main>
         <Header/>
         <div>
-          {movies.map()=>{
+          {movies.map(movie)=>{
             return <>
-            <Image src={"https://image.tmdb.org/t/p/w500/${poster_path}"} width={200} height={180}/>
+            <Image src={"https://image.tmdb.org/t/p/w500/${movie.poster_path}"} width={200} height={180}/>
             </>
             
           }}
