@@ -5,10 +5,10 @@ export default function Header() {
             <header>
                 <h1>IFMA</h1>
                 <form>
-                    <label for="site-search">Search the site:</label>
-<input type="search" id="site-search" name="q" />
+                    
+           <input type="search" id="site-search" name="q" />
 
-<button>Search</button>
+           <button>Search</button>
                     </form>
         
             </header>
