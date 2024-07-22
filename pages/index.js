@@ -38,7 +38,7 @@ export default function Home() {
         <div>
           {movies.map((data)=>{
             return <>
-            <Image width= {250} height={150} {`${baseURL}${movie.poster_path}`} alt={movie.name}/>
+            <Image width= {250} height={150} {`${baseURL}${movies.poster_path}`} alt={movie.name}/>
             </>
             
           })}
