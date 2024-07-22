@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import React, {  useEffect } from 'react';
 
 export default function Home() {
-  cons [movies, setMovies] = useState ([])
+  const [movies, setMovies] = useState ([])
   const getMovies = async () =>{
     try{
       await fetch ("https://api.themoviedb.org/3/discover/movie?api_key=906477201fdc7bb5edf0d0b6245069c5")
