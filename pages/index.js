@@ -17,6 +17,8 @@ export default function Home() {
   useEffect(()=>{
     getMovies()
   }, [])
+  
+  console.log(movies)
   return (
     <>
       <Head>
@@ -35,12 +37,12 @@ export default function Home() {
       <main>
         <Header/>
         <div>
-          {movies.map((data)=>{
+          {movies.map()=>{
             return <>
-            <Image src={"https://image.tmdb.org/t/p/w500/${data.poster_path}"} width={200} height={180}/>
+            <Image src={"https://image.tmdb.org/t/p/w500/${poster_path}"} width={200} height={180}/>
             </>
             
-          })}
+          }}
           </div>
 
       
