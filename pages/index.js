@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jeffery Agyepong | Web Developer</title>
+        <title>IFMA</title>
         
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
