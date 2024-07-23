@@ -40,7 +40,7 @@ useEffect(()=>{
         <div>
           {movies.map((data)=>{
             return <>
-            <Image src={"https://image.tmdb.org/t/p/original${data.backdrop_path}"} />
+            <Image src={"https://image.tmdb.org/t/p/w500/xg27NrXi7VXCGUr7MG75UqLl6Vg.jpg"} />
             </>
             
           })}
