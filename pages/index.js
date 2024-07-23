@@ -9,7 +9,7 @@ const getMovies = async () => {
   try{
     await fetch ("https://api.themoviedb.org/3/discover/movie?api_key=906477201fdc7bb5edf0d0b6245069c5")
     .then(res => res.json ())
-    .then(json => setMovies(json.results)) 
+    .then(data => setMovies(json.results)) 
     
   }catch(err){
     console.error(err)
