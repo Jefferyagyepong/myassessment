@@ -40,12 +40,12 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=906477201fdc7bb5edf0d
       <main>
         <Header/>
         <div>
-          {movies.map(movie)=>{
+          {movies.map(movie){
             return <>
             <Image src={"https://image.tmdb.org/t/p/w500/22dj38IckjzEEUZwN1tPU5VJ1qq.jpg"} width={200} height={180}/>
             </>
             
-          }}}
+          }}
           </div>
 
       
