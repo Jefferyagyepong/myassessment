@@ -4,21 +4,24 @@ import Header from "@/components/Header";
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
-  const [movies, setMovies] = useState ([])
-  const getMovies = async () =>{
-    try{
-      await fetch ("https://api.themoviedb.org/3/discover/movie?api_key=906477201fdc7bb5edf0d0b6245069c5")
-      .then(res => res.json())
-      .then(json => setMovies(json.results))
-    }catch(err){
-      console.error(err)
-    }
+
+const fetch = require('node-fetch');
+
+const url = 'https://api.themoviedb.org/3/authentication';
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MDY0NzcyMDFmZGM3YmI1ZWRmMGQwYjYyNDUwNjljNSIsIm5iZiI6MTcyMTY5MjU2NS43MTk1NTgsInN1YiI6IjY2OTg1ZDZiMzkyMWNiNDFiMjI5OGFmOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9NzE11TKSXv_tEGq3st9l3244K0gDZgZTJls4PwTV5I'
   }
-  useEffect(()=>{
-    getMovies()
-  }, [])
+};
+
+fetch("https://api.themoviedb.org/3/discover/movie?api_key=906477201fdc7bb5edf0d0b6245069c5", options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error('error:' + err));
+
   
-  console.log(movies)
   return (
     <>
       <Head>
