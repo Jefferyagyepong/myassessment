@@ -42,7 +42,7 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=906477201fdc7bb5edf0d
         <div>
           {movies.map(movie)=>{
             return <>
-            <Image src={"https://image.tmdb.org/t/p/w500/${movie.poster_path}"} width={200} height={180}/>
+            <Image src={"https://image.tmdb.org/t/p/w500${movie.poster_path}"} width={200} height={180}/>
             </>
             
           }}
