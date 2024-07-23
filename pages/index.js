@@ -38,9 +38,9 @@ useEffect(()=>{
       <main>
         <Header/>
         <div>
-          {movies.map((id)=>{
+          {movies.map((data)=>{
             return <>
-            <Image src={"https://image.tmdb.org/t/p/w780${id.backdrop_path}"} />
+            <Image src={"https://image.tmdb.org/t/p/w780${data.backdrop_path}"} />
             </>
             
           })}
