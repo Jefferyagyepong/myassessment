@@ -38,9 +38,9 @@ useEffect(()=>{
       <main>
         <Header/>
         <div>
-          {movies.map((id)=>{
+          {movies.map((data)=>{
             return <>
-            <Image src={"https://image.tmdb.org/t/p/w440${movie_id}"} />
+            <Image src={"https://image.tmdb.org/t/p/w440${data.poster_path}"} />
             </>
             
           })}
