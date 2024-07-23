@@ -40,7 +40,7 @@ useEffect(()=>{
         <div>
           {movies.map((id)=>{
             return <>
-            <Image src={"https://image.tmdb.org/t/p/w780/xg27NrXi7VXCGUr7MG75UqLl6Vg.jpg"} />
+            <Image src={"https://image.tmdb.org/t/p/w440${movie_id}"} />
             </>
             
           })}
